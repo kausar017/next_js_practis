@@ -20,25 +20,27 @@ export default function ServiceDetalsPage() {
   }, [id]);
 
   return (
-    <div className=" container mx-auto">
-      <h1>Service Details Page</h1>
-
-      {data ? (
-        <div className="py-5">
-          <div className="card card-compact bg-base-100 shadow-xl">
-            <figure>
-              <img src={data.download_url} alt={data.author} />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">{data.author}</h2>
-              <p>Id: {id}</p>
-             
+    <>
+      <h1 className="text-center text-4xl font-bold">Service Details Page</h1>
+      <div className=" container mx-auto">
+        {data ? (
+          <div className="py-5">
+            <div className="card card-compact bg-base-100 shadow-xl w-7/12 mx-auto">
+              <figure>
+                <img className="" src={data.download_url} alt={data.author} />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{data.author}</h2>
+                <p>Id: {id}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+        ) : (
+          <div className="flex flex-col justify-center items-center min-h-[800px]">
+            <span className="loading loading-ring w-24 "></span>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
