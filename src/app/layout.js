@@ -19,12 +19,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar></NavBar>
-        <main className="min-h-screen place-items-center place-content-center">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <footer>
           <h1>Footer</h1>
         </footer>

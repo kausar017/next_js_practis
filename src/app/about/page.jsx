@@ -17,20 +17,19 @@ export default function About() {
   return (
     <div>
       <p>About</p>
-      <Link
-        href={"/about/address"}
-        className="btn btn-sm border-2 p-2 rounded-md"
-      >
-        Address
-      </Link>
-      <Link
-        href={"/about/address"}
-        type="button"
-        onClick={handaleNavigation}
-        className="btn btn-sm border-2 p-2 rounded-md"
-      >
-        Address
-      </Link>
+      <div className="space-x-3">
+        <Link href={"/about/address"} className="btn btn-outline btn-primary">
+          Address
+        </Link>
+        <button
+          href={"/about/address"}
+          type="button"
+          onClick={handaleNavigation}
+          className="btn btn-outline btn-primary"
+        >
+          Address
+        </button>
+      </div>
     </div>
   );
 }
